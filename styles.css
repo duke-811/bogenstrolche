@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    h1 {
+        font-size: 50px; /* Größe anpassen */
+        font-weight: bold; /* Optional: Fettdruck */
+        text-align: center; /* Optional: Zentrieren */
+        color: whitesmoke; /* Optional: Farbe */
+    }
+    
+}
+
+
+
+header {
+    background-color: #8d4931;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ffcc00;
+}
+
+/* Logo-Styling */
+.logo-container {
+    margin-left: auto;
+}
+
+.logo-container img {
+    max-width: 100px; /* Größe des Logos anpassen */
+    height: auto;
+}
+
+
+.background-section {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px; /* Größe des Hintergrundbereichs */
+    padding-top: 250px; /* Platz für die Navigation */
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    color: white;
+}
+
+.container {
+    display: flex; /* Aktiviert Flexbox */
+    align-items: center; /* Richtet das Bild und den Text auf gleicher Höhe aus */
+    justify-content: space-between; /* Platz zwischen Bild und Text */
+    width: 100%; /* Volle Breite */
+
+}
+
+.image {
+    width: 500px; /* Bildbreite anpassen */
+    height: auto; /* Proportionale Höhe */
+    padding-right: 200px;
+}
+
+.text {
+    width: 600px; /* Breite des Textblocks */
+    margin-right: auto; /* Schiebt den Text nach links */
+    text-align: left; /* Text rechtsbündig */
+    padding-left: 50px;
+}

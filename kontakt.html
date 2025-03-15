@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogenstrolche Lauterbach - Über uns</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Startseite</a></li>
+            <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
+            <li><a href="3dparcours.html" class="nav-link">3D-Parcours</a></li>
+            <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Vereinslogo">
+    </div>
+</header>
+
+<h2>Bogenstrolche Lauterbach</h2>
+
+<p>
+    Wir sind die Bogensport Abteilung des Sportschützenverein Lauterbach und nennen uns seit 2025 Bogenstrolche Lauterbach<br>
+    Gemeinsam gehen wir unserer Leidenschaft des traditionellen Bogenschießen nach, am liebsten auf unserem vereinseigenen 3D-Parcours den wir mit Liebe eingerichtet haben und pflegen.<br>
+    
+
+
+</p>
+
+<script>
+    // Aktive Seite unterstreichen
+    document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll(".nav-link");
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
