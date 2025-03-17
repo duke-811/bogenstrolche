@@ -1,91 +1,78 @@
+/* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
-    h1 {
-        font-size: 50px; /* Größe anpassen */
-        font-weight: bold; /* Optional: Fettdruck */
-        text-align: center; /* Optional: Zentrieren */
-        color: whitesmoke; /* Optional: Farbe */
-    }
-    
 }
 
-
-
-header {
-    background-color: #8d4931;
-    padding: 20px;
+/* Desktop-Navigation */
+.desktop-nav ul {
     display: flex;
-    align-items: flex-end;
-    
-}
-
-nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
     gap: 20px;
+    padding: 15px;
+    background: #333;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    font-size: 20px;
+.desktop-nav a {
     text-decoration: none;
     color: white;
-    padding: 5px;
+    padding: 10px;
 }
 
-nav ul li a.active {
-    border-bottom: 2px solid #ffcc00;
+/* Mobile Navigation (Standardmäßig versteckt) */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Versteckt */
+    width: 250px;
+    height: 100%;
+    background: #333;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
 }
 
-/* Logo-Styling */
-.logo-container {
-    margin-left: auto;
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.logo-container img {
-    max-width: 100px; /* Größe des Logos anpassen */
-    height: auto;
-}
-
-
-.background-section {
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 800px; /* Größe des Hintergrundbereichs */
-    padding-top: 250px; /* Platz für die Navigation */
-    display: flex;
-    justify-content: center;
-    align-items: top;
+.mobile-nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
     color: white;
+    border-bottom: 1px solid #444;
 }
 
-.container {
-    display: flex; /* Aktiviert Flexbox */
-    align-items: center; /* Richtet das Bild und den Text auf gleicher Höhe aus */
-    justify-content: space-between; /* Platz zwischen Bild und Text */
-    width: 100%; /* Volle Breite */
-
+.mobile-nav a:hover {
+    background: #555;
 }
 
-.image {
-    width: 500px; /* Bildbreite anpassen */
-    height: auto; /* Proportionale Höhe */
-    padding-right: 200px;
+/* Menü-Button */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.text {
-    width: 600px; /* Breite des Textblocks */
-    margin-right: auto; /* Schiebt den Text nach links */
-    text-align: left; /* Text rechtsbündig */
-    padding-left: 50px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-nav.active {
+        left: 0;
+    }
 }
