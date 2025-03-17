@@ -10,7 +10,7 @@
 <body>
 
 <header>
-    <nav>
+    <nav class="desktop-nav">
         <ul>
             <li><a href="index.html" class="nav-link">Startseite</a></li>
             <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
@@ -20,8 +20,20 @@
     </nav>
 
     <div class="logo-container">
-        <img src="logo.jpg" alt="Vereinslogo">
+        <img src="images/logo.jpg" alt="Vereinslogo">
     </div>
+
+    <!-- Hamburger Menü für Mobile -->
+    <button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
+
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="nav-link">Startseite</a></li>
+            <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
+            <li><a href="3dparcours.html" class="nav-link">3D-Parcours</a></li>
+            <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+        </ul>
+    </nav>
 
 </header>
 
@@ -29,17 +41,7 @@
     <h1>Herzlich Willkommen bei den Bogenstrolchen Lauterbach!</h1>
 </div>
 
-<script>
-    // Aktive Seite unterstreichen
-    document.addEventListener("DOMContentLoaded", () => {
-        const links = document.querySelectorAll(".nav-link");
-        links.forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add("active");
-            }
-        });
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
